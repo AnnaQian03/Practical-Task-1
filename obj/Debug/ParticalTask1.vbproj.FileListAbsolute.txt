@@ -1,0 +1,13 @@
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\bin\Debug\ParticalTask1.exe.config
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\bin\Debug\ParticalTask1.exe
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\bin\Debug\ParticalTask1.pdb
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\bin\Debug\ParticalTask1.xml
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.vbprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.Form1.resources
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.Resources.resources
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.vbproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.exe
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.xml
+c:\users\user\documents\visual studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.SplashScreen.resources
+C:\Users\User\Documents\Visual Studio 2015\Projects\ParticalTask1\ParticalTask1\obj\Debug\ParticalTask1.About.resources
