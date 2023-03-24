@@ -43,18 +43,24 @@ Partial Class Form1
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtSalary = New System.Windows.Forms.TextBox()
         Me.txtOvertime = New System.Windows.Forms.TextBox()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.BTNAbout = New System.Windows.Forms.Button()
         Me.BTNClear = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BTNBrowse = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtRateHour = New System.Windows.Forms.TextBox()
+        Me.txtWorkHour = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtFinalTotal = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -114,6 +120,7 @@ Partial Class Form1
         '
         'Label1
         '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.Label1.Location = New System.Drawing.Point(23, 115)
         Me.Label1.Name = "Label1"
@@ -193,7 +200,7 @@ Partial Class Form1
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.Label5.Location = New System.Drawing.Point(590, 176)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(218, 46)
+        Me.Label5.Size = New System.Drawing.Size(205, 46)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Age :"
         '
@@ -209,7 +216,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.CheckBox1.Location = New System.Drawing.Point(29, 427)
+        Me.CheckBox1.Location = New System.Drawing.Point(288, 535)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(448, 29)
         Me.CheckBox1.TabIndex = 15
@@ -218,35 +225,28 @@ Partial Class Form1
         '
         'Label6
         '
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label6.Location = New System.Drawing.Point(834, 115)
+        Me.Label6.Location = New System.Drawing.Point(12, 249)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(109, 42)
+        Me.Label6.Size = New System.Drawing.Size(109, 30)
         Me.Label6.TabIndex = 18
         Me.Label6.Text = "Salary : "
         '
         'Label7
         '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label7.Location = New System.Drawing.Point(834, 157)
+        Me.Label7.Location = New System.Drawing.Point(8, 113)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(109, 42)
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "Overtime :"
         '
-        'Label8
-        '
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label8.Location = New System.Drawing.Point(834, 199)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(109, 42)
-        Me.Label8.TabIndex = 20
-        Me.Label8.Text = "Total :"
-        '
         'txtSalary
         '
         Me.txtSalary.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.txtSalary.Location = New System.Drawing.Point(953, 115)
+        Me.txtSalary.Location = New System.Drawing.Point(139, 243)
         Me.txtSalary.Name = "txtSalary"
         Me.txtSalary.Size = New System.Drawing.Size(194, 30)
         Me.txtSalary.TabIndex = 21
@@ -254,23 +254,15 @@ Partial Class Form1
         'txtOvertime
         '
         Me.txtOvertime.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.txtOvertime.Location = New System.Drawing.Point(953, 157)
+        Me.txtOvertime.Location = New System.Drawing.Point(139, 113)
         Me.txtOvertime.Name = "txtOvertime"
         Me.txtOvertime.Size = New System.Drawing.Size(194, 30)
         Me.txtOvertime.TabIndex = 22
         '
-        'txtTotal
-        '
-        Me.txtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.txtTotal.Location = New System.Drawing.Point(953, 199)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(194, 30)
-        Me.txtTotal.TabIndex = 23
-        '
         'BTNAbout
         '
         Me.BTNAbout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.BTNAbout.Location = New System.Drawing.Point(1030, 431)
+        Me.BTNAbout.Location = New System.Drawing.Point(1030, 529)
         Me.BTNAbout.Name = "BTNAbout"
         Me.BTNAbout.Size = New System.Drawing.Size(117, 39)
         Me.BTNAbout.TabIndex = 24
@@ -280,7 +272,7 @@ Partial Class Form1
         'BTNClear
         '
         Me.BTNClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.BTNClear.Location = New System.Drawing.Point(907, 431)
+        Me.BTNClear.Location = New System.Drawing.Point(907, 529)
         Me.BTNClear.Name = "BTNClear"
         Me.BTNClear.Size = New System.Drawing.Size(117, 39)
         Me.BTNClear.TabIndex = 25
@@ -290,7 +282,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(708, 244)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 407)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(270, 155)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -300,28 +292,94 @@ Partial Class Form1
         'BTNBrowse
         '
         Me.BTNBrowse.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.BTNBrowse.Location = New System.Drawing.Point(979, 364)
+        Me.BTNBrowse.Location = New System.Drawing.Point(288, 407)
         Me.BTNBrowse.Name = "BTNBrowse"
         Me.BTNBrowse.Size = New System.Drawing.Size(168, 35)
         Me.BTNBrowse.TabIndex = 27
         Me.BTNBrowse.Text = "Browse Picture"
         Me.BTNBrowse.UseVisualStyleBackColor = True
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Aqua
+        Me.Panel2.Controls.Add(Me.txtFinalTotal)
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.txtRateHour)
+        Me.Panel2.Controls.Add(Me.txtWorkHour)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.txtSalary)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.txtOvertime)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Location = New System.Drawing.Point(801, 104)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(359, 419)
+        Me.Panel2.TabIndex = 28
+        '
+        'txtRateHour
+        '
+        Me.txtRateHour.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.txtRateHour.Location = New System.Drawing.Point(139, 65)
+        Me.txtRateHour.Name = "txtRateHour"
+        Me.txtRateHour.Size = New System.Drawing.Size(194, 30)
+        Me.txtRateHour.TabIndex = 24
+        '
+        'txtWorkHour
+        '
+        Me.txtWorkHour.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.txtWorkHour.Location = New System.Drawing.Point(139, 23)
+        Me.txtWorkHour.Name = "txtWorkHour"
+        Me.txtWorkHour.Size = New System.Drawing.Size(194, 30)
+        Me.txtWorkHour.TabIndex = 23
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Label10.Location = New System.Drawing.Point(8, 65)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(111, 25)
+        Me.Label10.TabIndex = 22
+        Me.Label10.Text = "Rate/Hour :"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Label9.Location = New System.Drawing.Point(8, 28)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(117, 25)
+        Me.Label9.TabIndex = 21
+        Me.Label9.Text = "Work Hour :"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Label11.Location = New System.Drawing.Point(12, 303)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(67, 25)
+        Me.Label11.TabIndex = 25
+        Me.Label11.Text = "Total :"
+        '
+        'txtFinalTotal
+        '
+        Me.txtFinalTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.txtFinalTotal.Location = New System.Drawing.Point(139, 298)
+        Me.txtFinalTotal.Name = "txtFinalTotal"
+        Me.txtFinalTotal.Size = New System.Drawing.Size(194, 30)
+        Me.txtFinalTotal.TabIndex = 26
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1159, 482)
+        Me.ClientSize = New System.Drawing.Size(1159, 574)
         Me.Controls.Add(Me.BTNBrowse)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BTNClear)
         Me.Controls.Add(Me.BTNAbout)
-        Me.Controls.Add(Me.txtTotal)
-        Me.Controls.Add(Me.txtOvertime)
-        Me.Controls.Add(Me.txtSalary)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.Label5)
@@ -335,7 +393,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Employee Detail"
@@ -345,6 +406,8 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -366,10 +429,8 @@ Partial Class Form1
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents txtSalary As TextBox
     Friend WithEvents txtOvertime As TextBox
-    Friend WithEvents txtTotal As TextBox
     Friend WithEvents BTNAbout As Button
     Friend WithEvents BTNClear As Button
     Friend WithEvents MenuStrip1 As MenuStrip
@@ -378,4 +439,11 @@ Partial Class Form1
     Friend WithEvents EXITToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BTNBrowse As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents txtRateHour As TextBox
+    Friend WithEvents txtWorkHour As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtFinalTotal As TextBox
+    Friend WithEvents Label11 As Label
 End Class

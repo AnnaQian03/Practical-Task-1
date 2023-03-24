@@ -5,8 +5,25 @@
         About.Show()
     End Sub
 
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles txtSalary.TextChanged
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles txtSalary.Click
+        Dim salary As Double = Val(txtSalary.Text)
+        Dim overtime As Double = Val(txtOvertime.Text)
 
+        Dim workhour As Integer = Val(txtWorkHour.Text)
+        Dim ratehour As Double = Val(txtRateHour.Text)
+        Dim finaltotal As Double = Val(txtFinalTotal.Text)
+
+        salary = workhour * ratehour
+        finaltotal = salary + overtime
+
+        txtOvertime.Text = workhour.ToString
+        txtRateHour.Text = ratehour.ToString
+        txtFinalTotal.Text = finaltotal.ToString("c2")
+        txtSalary.Text = salary.ToString("c2")
+        txtOvertime.Text = overtime.ToString("c2")
+
+
+        ' Allow user to enter the value of their salary and calculate the total salary
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BTNClear.Click
@@ -15,18 +32,8 @@
         ' Allow user to clear all the input
     End Sub
 
-    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles txtTotal.Click
-        Dim salary As Double = Val(txtSalary.Text)
-        Dim overtime As Double = Val(txtOvertime.Text)
-        Dim total As Double = Val(txtTotal.Text)
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs)
 
-        total = salary + overtime
-
-        txtSalary.Text = salary.ToString("c2")
-        txtOvertime.Text = overtime.ToString("c2")
-        txtTotal.Text = total.ToString("c2")
-
-        ' Allow user to enter the value of their salary and calculate the total salary
     End Sub
 
     Private Sub OpenRecentToolStripMenuItem_Click(sender As Object, e As EventArgs) 
@@ -73,5 +80,31 @@
     Private Sub EXITToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EXITToolStripMenuItem.Click
         Application.Exit()
         ' Allow the user to exit the application
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub txtTotal_TextChanged(sender As Object, e As EventArgs) Handles txtFinalTotal.Click
+        Dim salary As Double = Val(txtSalary.Text)
+        Dim overtime As Double = Val(txtOvertime.Text)
+
+        Dim workhour As Double = Val(txtWorkHour.Text)
+        Dim ratehour As Double = Val(txtRateHour.Text)
+        Dim finaltotal As Double = Val(txtFinalTotal.Text)
+
+        salary = workhour * ratehour
+        finaltotal = salary + overtime
+
+        txtOvertime.Text = workhour.ToString
+        txtRateHour.Text = ratehour.ToString
+        txtFinalTotal.Text = finaltotal.ToString("c2")
+        txtSalary.Text = salary.ToString("c2")
+        txtOvertime.Text = overtime.ToString("c2")
+
+
+        ' Allow user to enter the value of their salary and calculate the total salary
+
     End Sub
 End Class
